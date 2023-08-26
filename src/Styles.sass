@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap')
+@import 'componenets/Searchbar'
+
+$font : 'Lora', serif
+
+.dictionary
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 4rem 14vw
+    box-sizing: border-box
+
+    .dictionary_start
+        width: 100%
+
+    hr
+        width: unset
+        height: .01rem
+        background: grey
+        outline: none
+        border: none
+        margin: 0
+        flex: 1
+
+    .soun
+        font-size: 1.9rem
+        color: #b861ea
+
+    .source
+        padding: 3rem 0 0 0
+        font-size: .9rem
+        
+        div
+            @include display($flex: row, $align: center, $justify: flex-start)
+            gap: 1rem
+            padding-top: 1rem
+            color: #737373
+
+            a
+                color: #1c2022
+                text-decoration: underline
+            
+        
+
+    .first_part
+        @include display($flex: row, $align: center, $justify: space-between)
+        
+        .name_dets
+            @include display($flex: column, $align: flex-start, $justify: center)
+
+        .word
+            font-size: 6rem
+
+    .second_part
+
+        .word_dets
+            @include display($flex: row , $align: center, $justify: space-between)
+            gap: 1rem
+            padding: 2rem 0
+
+            .noun
+                font-weight: 900
+                font-size: 1.5rem
+                width: fit-content
+                font-family: $font
+                font-style: oblique
+
+        .none
+            font-size: 1.3rem
+            color: #737373
+        
+        .meaning_div
+        
+            ul
+                list-style: none
+
+                li
+                    font-size: 1.1rem
+                    color: #1c2022
+                
+            ul li::before 
+                content: "\2022" 
+                color: #b861ea
+                font-weight: bolder 
+                display: inline-block 
+                width: 1em 
+                margin-left: -1em 
+                font-size: 1.1rem
+
+        .synonym
+            @include display($flex: row, $align: center, $justify: flex-start)
+            gap: 1.2rem
+
+            .list
+                @include display($flex: row, $align: center, $justify: flex-start)
+                list-style: none
+                gap: .7rem
+                color: #b861ea
+                font-weight: 900!important
+                font-size: 1.1rem
+                padding: 0
+                margin: 0 
+                flex-wrap: wrap   
+    
+    .audio
+        font-size: 3rem
+        color: #b861ea
+        cursor: pointer
+                    
+    .dic_div
+        padding: 1rem 0
+        @include display($flex: column, $align: flex-start, $justify: flex-start)
+        gap: .5rem
+        
+
+        .dic_word
+            font-size: 8rem
+            font-family: $font
+            font-style: oblique
+            line-height: 1.2
+
+        .please
+            font-size: 1.2rem
+            
+            
+            
