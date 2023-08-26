@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/adebimpecole/Dictionarys_.git)
-- Live Site URL: (https://legendary-khapse-9da717.netlify.app/)
+- Live Site URL: ()
 
 ## My process
 
@@ -44,7 +44,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Mary Cole](https://www.your-site.com)
-- Frontend Mentor - [@adebimpecole](https://www.frontendmentor.io/profile/adebimpecole)
+- Website - [Mary Cole]()
 - Twitter - [@adecole02](https://twitter.com/adecole02)
 
