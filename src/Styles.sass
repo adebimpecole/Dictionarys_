@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap')
 @import 'componenets/Searchbar'
 
-$font : 'Lora', serif
+$font: 'Lora', serif
 
 .dictionary
     width: 100%
@@ -9,8 +9,9 @@ $font : 'Lora', serif
     flex-direction: column
     align-items: flex-start
     justify-content: flex-start
-    padding: 4rem 14vw
+    padding: 3rem 2rem
     box-sizing: border-box
+    gap: 1rem
 
     .dictionary_start
         width: 100%
@@ -25,13 +26,13 @@ $font : 'Lora', serif
         flex: 1
 
     .soun
-        font-size: 1.9rem
+        font-size: 1rem
         color: #b861ea
 
     .source
         padding: 3rem 0 0 0
-        font-size: .9rem
-        
+        font-size: .8rem
+
         div
             @include display($flex: row, $align: center, $justify: flex-start)
             gap: 1rem
@@ -39,90 +40,224 @@ $font : 'Lora', serif
             color: #737373
 
             a
-                color: #1c2022
-                text-decoration: underline
-            
-        
+                color: #b861ea
+                cursor: pointer
+                text-decoration: none
+
+                &:hover
+                    text-decoration: underline
 
     .first_part
         @include display($flex: row, $align: center, $justify: space-between)
-        
+
         .name_dets
             @include display($flex: column, $align: flex-start, $justify: center)
 
         .word
-            font-size: 6rem
+            font-size: 2rem
 
     .second_part
 
         .word_dets
             @include display($flex: row , $align: center, $justify: space-between)
             gap: 1rem
-            padding: 2rem 0
+            padding: .5rem 0
 
             .noun
                 font-weight: 900
-                font-size: 1.5rem
+                font-size: 1.1rem
                 width: fit-content
                 font-family: $font
                 font-style: oblique
 
         .none
-            font-size: 1.3rem
+            font-size: 1rem
             color: #737373
-        
+
         .meaning_div
-        
+
             ul
                 list-style: none
 
                 li
-                    font-size: 1.1rem
+                    font-size: .9rem
                     color: #1c2022
-                
+
             ul li::before 
-                content: "\2022" 
-                color: #b861ea
-                font-weight: bolder 
-                display: inline-block 
-                width: 1em 
-                margin-left: -1em 
-                font-size: 1.1rem
+                    content: "\2022"
+                    color: #b861ea
+                    font-weight: bolder
+                    display: inline-block
+                    width: 1em
+                    margin-left: -1em
+                    font-size: 1.1rem
+
+            .meaning
+                margin: .5rem 0 1rem
 
         .synonym
-            @include display($flex: row, $align: center, $justify: flex-start)
+            @include display($flex: row, $align: flex-start, $justify: flex-start)
             gap: 1.2rem
+            padding-bottom: 1rem
 
             .list
                 @include display($flex: row, $align: center, $justify: flex-start)
                 list-style: none
-                gap: .7rem
                 color: #b861ea
-                font-weight: 900!important
-                font-size: 1.1rem
+                font-weight: 500
+                font-size: .9rem
                 padding: 0
-                margin: 0 
-                flex-wrap: wrap   
-    
+                margin: 0
+                padding-right: .5rem
+                flex-wrap: wrap
+
+                .mean
+                    margin-right: .5rem
+                    cursor: pointer
+
+                    &:hover
+                        text-decoration: underline
+
     .audio
-        font-size: 3rem
+        font-size: 1.5rem
         color: #b861ea
         cursor: pointer
-                    
+
     .dic_div
         padding: 1rem 0
         @include display($flex: column, $align: flex-start, $justify: flex-start)
-        gap: .5rem
-        
 
         .dic_word
-            font-size: 8rem
+            font-size: 3rem
             font-family: $font
             font-style: oblique
             line-height: 1.2
 
         .please
             font-size: 1.2rem
-            
-            
-            
+
+@media only screen and (min-width: 464px)
+    .dictionary
+
+        .dic_div
+            gap: .3rem
+
+            .dic_word
+                font-size: 4rem
+                line-height: 1
+                font-weight: 600
+
+        .soun
+            font-size: 1.1rem
+
+        .second_part
+
+            .word_dets
+                padding: 1rem 0
+
+                .noun
+                    font-size: 1.3rem
+
+            .none
+                font-size: 1.1rem
+
+            .meaning_div
+
+                ul
+
+                    li
+                        font-size: 1rem
+
+            .synonym
+
+                .list
+                    font-size: 1rem
+
+        .first_part
+
+            .name_dets
+
+                .word
+                    font-size: 3rem
+
+        .audio
+            font-size: 2rem
+
+@media only screen and (min-width: 616px)
+    .dictionary
+
+        .dic_div
+            gap: .3rem
+
+            .dic_word
+                font-size: 5rem
+                line-height: 1
+
+        .soun
+            font-size: 1.5rem
+
+        .first_part
+
+            .name_dets
+
+                .word
+                    font-size: 4rem
+
+@media only screen and (min-width: #{$tablet-width})
+    .dictionary
+        padding: 4rem 4rem
+        gap: 2rem
+
+        .dic_div
+            gap: .3rem
+
+            .dic_word
+                font-size: 6rem
+                line-height: 1
+
+        .soun
+            font-size: 1.9rem
+
+        .second_part
+
+            .word_dets
+                padding: 2rem 0
+
+                .noun
+                    font-size: 1.5rem
+
+            .none
+                font-size: 1.3rem
+
+            .meaning_div
+
+                ul
+
+                    li
+                        font-size: 1.1rem
+
+            .synonym
+
+                .list
+                    font-size: 1.1rem
+
+        .first_part
+
+            .name_dets
+
+                .word
+                    font-size: 6rem
+
+        .audio
+            font-size: 3rem
+
+        .source
+            font-size: .9rem
+
+@media only screen and (min-width: #{$desktop-width})
+    .dictionary
+        width: 924px
+        margin: auto
+        padding: 4rem 0
+        box-sizing: border-box
+        gap: 3rem
